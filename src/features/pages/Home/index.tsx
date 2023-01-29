@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import * as Styles from "./styles"
-import BackgroundImage from "../../assets/background.jpg"
-import { Navigate } from 'react-router-dom'
+import BackgroundImage from "../../../assets/background.jpg"
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-
+  const navigate = useNavigate();
 
   return (
     <>
@@ -23,7 +23,7 @@ const Home = () => {
               Home
             </Styles.LI>
             <Styles.LI>
-              <Styles.LiButton>
+              <Styles.LiButton onClick={() => {navigate("/quiz")}}>
                 START QUIZ
               </Styles.LiButton>
             </Styles.LI>
