@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  position: relative;
   flex-direction: row;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
@@ -14,12 +13,25 @@ export const TeamOne = styled.div`
   flex-wrap: wrap;
   justify-content: end;
   background-color: orange;
-  gap: 250px;
+  gap: 200px;
   width: 50%;
   font-weight: 700;
   border-bottom: 1px solid black;
+
+  @media screen and (max-width: 1115px) {
+    gap: 80px;
+  }
+  @media screen and (max-width: 650px) {
+    gap: 65px;
+  }
   label {
     font-size: 40px;
+    @media screen and (max-width: 1115px) {
+      font-size: 35px;
+    }
+    @media screen and (max-width: 650px) {
+      font-size: 20px;
+    }
   }
 `
 
@@ -28,12 +40,25 @@ export const TeamTwo = styled.div`
   flex-wrap: wrap;
   justify-content: start;
   background-color: blue;
-  gap: 250px;
+  gap: 200px;
   width: 50%;
   font-weight: 700;
   border-bottom: 1px solid black;
+
+  @media screen and (max-width: 1115px) {
+    gap: 80px;
+  }
+  @media screen and (max-width: 650px) {
+    gap: 65px;
+  }
   label {
     font-size: 40px;
+    @media screen and (max-width: 1115px) {
+      font-size: 35px;
+    }
+    @media screen and (max-width: 650px) {
+      font-size: 20px;
+    }
   }
 `
 
@@ -44,6 +69,12 @@ export const ButtonPOne = styled.div`
   left: 0;
   gap: 5px;
   top: 12px;
+  @media screen and (max-width: 1115px) {
+    top: 8px;
+  }
+  @media screen and (max-width: 650px) {
+    top: 0.5px;
+  }
 `
 
 export const ButtonPTwo = styled.div`
@@ -53,6 +84,12 @@ export const ButtonPTwo = styled.div`
   right: 0;
   gap: 5px;
   top: 12px;
+  @media screen and (max-width: 1115px) {
+    top: 8px;
+  }
+  @media screen and (max-width: 650px) {
+    top: 0.5px;
+  }
 `
 
 export const Scores = styled.div`
