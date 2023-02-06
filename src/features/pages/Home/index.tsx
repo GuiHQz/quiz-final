@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
 import * as Styles from "./styles"
-import BackgroundImage from "../../../assets/background.jpg"
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import iconList from "../../../assets/imgs/form-list.png"
-import userLogo from "../../../assets/imgs/user-logo.png"
-import { Champions } from "../../components/Champions";
 import { Button } from "../../components/Button";
+import { Champions } from "../../components/Champions";
+import userLogo from "../../../assets/imgs/user-logo.png"
+import iconList from "../../../assets/imgs/form-list.png"
+import BackgroundImage from "../../../assets/background.jpg"
 
 const Home = () => {
   const navigate = useNavigate();
@@ -16,7 +16,9 @@ const Home = () => {
         <Styles.Body>
           <h1>RIVALS</h1>
           <h2>QUIZ</h2>
-          <Button />
+          <Button 
+            // onClick={() => navigate("/quiz")}
+          />
         </Styles.Body>
         <Styles.Footer>
           <Styles.BlockFooterOne>

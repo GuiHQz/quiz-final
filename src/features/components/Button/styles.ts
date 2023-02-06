@@ -16,8 +16,10 @@ export const Button = styled.div`
 	font-size: 50px;
 	font-weight: 700;
 	border-radius: 10px;
+  transition: all 0.3s ease-out;
 	:hover {
 		background-color: #2E0249;
 		color: #A91079;
+    transition: all 0.3s ease-in;
 	}
 `

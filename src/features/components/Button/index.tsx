@@ -18,8 +18,13 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <Styles.Container>
       <Styles.Button
-        onMouseOver={() => setImage(GpPink)}
-        onMouseOut={() => setImage(GpWhite)}
+        onClick={onClick}
+        onMouseOver={() => setTimeout(() => {
+          setImage(GpPink);
+        }, 150)}
+        onMouseOut={() => setTimeout(() => {
+          setImage(GpWhite);
+        }, 150)}
       >
         START QUIZ
         <img
