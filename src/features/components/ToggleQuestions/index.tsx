@@ -3,6 +3,10 @@ import { AllTypeQuestions } from "../../pages/Quiz";
 import { List1 } from "../../pages/Quiz/components/List1";
 
 interface ToggleQuestionsProps {
+  /**
+   * Propriedade responsável pela renderização de uma página de questões quando for clicada
+   * no botão
+   */
   currentPageQuestion: AllTypeQuestions;
 }
 

@@ -2,9 +2,21 @@ import React, { useState } from "react";
 import * as Styles from "./styles";
 
 interface ScoreboardProps {
+  /**
+   * Propriedade do nome do player um
+   */
   namePOne: string
+  /**
+   * Propriedade do nome do player dois
+   */
   namePTwo: string
+  /**
+   * Propriedade da pontuação do player um
+   */
   scorePOne: number
+  /**
+   * Propriedade da pontuação do player dois
+   */
   scorePTwo: number
 }
 
