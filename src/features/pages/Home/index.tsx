@@ -14,7 +14,8 @@ const Home = () => {
     <Styles.Container>
       <Styles.BlockOne>
         <Styles.Body>
-          <h1>Rivals Quiz</h1>
+          <h1>RIVALS</h1>
+          <h2>QUIZ</h2>
           <Button />
         </Styles.Body>
         <Styles.Footer>
