@@ -13,15 +13,16 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
 }) => {
   const questions = Questions;
   const [selectedAlternative, setSelectedAlternative] = useState<string>();
+  const [correctAlternative, setCorrectAlternative] = useState<string>();
 
   return (
     <Styles.Container>
       <Styles.Content>
         <Styles.Close onClick={onClose} />
         {questions[questionNumber].others.map(e =>
-          <div>
-            <h1>{e.questionNumber}</h1> <h1>{e.title}</h1>
-          </div>
+          <Styles.Header>
+            <h1>{e.title}</h1>
+          </Styles.Header>
         )}
         {questions[questionNumber].alternatives.map(e =>
           <Styles.Button

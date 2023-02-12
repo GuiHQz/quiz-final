@@ -49,6 +49,11 @@ export const Close = styled.button`
   }
 `
 
+export const Header = styled.div`
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 100px;
+`
+
 export const Button = styled.button`
   .singleOption {
     width: 46%;
@@ -60,7 +65,10 @@ export const Button = styled.button`
   background-color: gray;
   cursor: pointer;
   margin: 10px;
+  height: 100px;
+  width: 400px;
+  border: none;
   :hover {
-    background-color: yellow;
+    background-color: #4f4f4f;
   }
 `

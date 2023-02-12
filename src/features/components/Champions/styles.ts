@@ -13,7 +13,7 @@ export const Table = styled.div`
   /* border: 1px solid yellow; */
 `
 
-export const Participants = styled.tr`
+export const Participants = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -30,13 +30,13 @@ export const Participants = styled.tr`
 //   width: 8%;
 // `
 
-export const Name = styled.td`
+export const Name = styled.div`
   border-bottom: 1px solid white;
   height: 2rem;
   width: 70%;
 `
 
-export const Score = styled.td`
+export const Score = styled.div`
   border-bottom: 1px solid white;
   height: 2rem;
   width: 22%;
