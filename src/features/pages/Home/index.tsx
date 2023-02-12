@@ -17,7 +17,7 @@ const Home = () => {
           <h1>RIVALS</h1>
           <h2>QUIZ</h2>
           <Button 
-            // onClick={() => navigate("/quiz")}
+            onClick={() => navigate("/quiz")}
           />
         </Styles.Body>
         <Styles.Footer>
