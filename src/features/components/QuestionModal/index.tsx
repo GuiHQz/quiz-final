@@ -14,7 +14,7 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
     questionNumber
 }) => {
     const textQuestions = Questions;
-    const [selectedAlternative, setSelectedAlternative] = useState<string>();
+    const [selectedAlternative, setSelectedAlternative] = useState<string | null>(null);
 
     return (
         <Styles.Container>
@@ -35,13 +35,15 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
 
                         {textQuestions[questionNumber].alternatives.map(e =>
                             <Styles.Button
+                                key={e.alternative}
                                 onClick={() => setSelectedAlternative(e.alternative)}
                                 style={{
                                     backgroundColor:
-                                        selectedAlternative === e.alternative ?
-                                            e.isCorrect
-                                                ? 'green'
-                                                : 'red'
+                                        selectedAlternative !== null ?
+                                            selectedAlternative === e.alternative && !e.isCorrect ? 'red' :
+                                                e.isCorrect
+                                                    ? 'green'
+                                                    : ''
                                             : ' '
                                 }}>
                                 {e.answer}
