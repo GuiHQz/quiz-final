@@ -1,6 +1,7 @@
 import * as Styles from "./styles";
 import { AllTypeQuestions } from "../../pages/Quiz";
 import { List1 } from "../../pages/Quiz/components/List1";
+import { List2 } from "../../pages/Quiz/components/List2";
 
 interface ToggleQuestionsProps {
   /**
@@ -15,19 +16,19 @@ export const ToggleQuestions: React.FC<ToggleQuestionsProps> = ({
 }) => {
   return (
     <Styles.Container>
-      {currentPageQuestion == "Q1" && (
+      {currentPageQuestion == "QP1" && (
         <List1 />
       )}
-      {currentPageQuestion == "Q2" && (
-        <div>2</div>
+      {currentPageQuestion == "QP2" && (
+        <List2 />
       )}
-      {currentPageQuestion == "Q3" && (
+      {currentPageQuestion == "QP3" && (
         <div>3</div>
       )}
-      {currentPageQuestion == "Q4" && (
+      {currentPageQuestion == "QP4" && (
         <div>4</div>
       )}
-      {currentPageQuestion == "Q5" && (
+      {currentPageQuestion == "QP5" && (
         <div>5</div>
       )}
     </Styles.Container>
