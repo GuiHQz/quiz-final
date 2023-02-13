@@ -12,13 +12,25 @@ export const Scoreboard = styled.div`
 export const Toggle = styled.div`
 	display: block;
 	position: absolute;
-	top: 47px;
+	top: 60px;
 	left: 50%;
 	right: 50%;
 `
 export const ToggleWrapper = styled.div`
 	display: flex;
 	justify-content: center;
+	font-family: 'Roboto', sans-serif;
+	button {
+		border: none;
+		cursor: pointer;
+		background-color: gray;
+		margin: 0 20px;
+		padding: 5px 15px;
+		font-weight: 700;
+		:hover {
+			background-color: white;
+		}
+	}
 `
 
 export const Content = styled.div`
