@@ -3,45 +3,60 @@ import * as Styles from "./styles"
 import { Questions } from "../../../features/pages/Quiz/components/List1/data/questions"
 
 interface QuestionModalProps {
-  onClose: () => void
-  questionNumber: number
+    onClose: () => void
+    questionNumber: number
+    type?: "image" | "text" | "video";
 }
 
 export const QuestionModal: React.FC<QuestionModalProps> = ({
-  onClose,
-  questionNumber
+    type,
+    onClose,
+    questionNumber
 }) => {
-  const questions = Questions;
-  const [selectedAlternative, setSelectedAlternative] = useState<string>();
-  const [correctAlternative, setCorrectAlternative] = useState<string>();
+    const textQuestions = Questions;
+    const [selectedAlternative, setSelectedAlternative] = useState<string>();
 
-  return (
-    <Styles.Container>
-      <Styles.Content>
-        <Styles.Close onClick={onClose} />
-        {questions[questionNumber].others.map(e =>
-          <Styles.Header>
-            <h1>{e.title}</h1>
-          </Styles.Header>
-        )}
-        {questions[questionNumber].alternatives.map(e =>
-          <Styles.Button
-            onClick={() => setSelectedAlternative(e.alternative)}
-            style={
-              {
-                backgroundColor:
-                  selectedAlternative === e.alternative ?
-                    e.isCorrect
-                      ? 'green'
-                      : 'red'
-                    : ' '
-              }
-            }
-          >
-            {e.answer}
-          </Styles.Button>
-        )}
-      </Styles.Content>
-    </Styles.Container>
-  )
+    return (
+        <Styles.Container>
+            <Styles.Content>
+                <Styles.Close onClick={onClose} />
+                {type === "image" &&
+                    <Styles.Header>
+                        Image questions
+                    </Styles.Header>}
+
+                {type === "text" &&
+                    <div>
+                        <Styles.Header>
+                            {textQuestions[questionNumber].others.map(e =>
+                                <h1>{e.title}</h1>
+                            )}
+                        </Styles.Header>
+
+                        {textQuestions[questionNumber].alternatives.map(e =>
+                            <Styles.Button
+                                onClick={() => setSelectedAlternative(e.alternative)}
+                                style={{
+                                    backgroundColor:
+                                        selectedAlternative === e.alternative ?
+                                            e.isCorrect
+                                                ? 'green'
+                                                : 'red'
+                                            : ' '
+                                }}>
+                                {e.answer}
+                            </Styles.Button>
+                        )}
+                    </div>
+                }
+
+                {type === "video" &&
+                    <Styles.Header>
+                        video questions
+                    </Styles.Header>
+                }
+
+            </Styles.Content>
+        </Styles.Container>
+    )
 }

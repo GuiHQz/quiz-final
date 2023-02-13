@@ -58,7 +58,7 @@ export const List1: React.FC = () => {
 
   return (
     <Styles.Container>
-      {isOpen ? <QuestionModal questionNumber={numberQuestion!} onClose={() => setIsOpen(false)}/> : null}
+      {isOpen ? <QuestionModal type="text" questionNumber={numberQuestion!} onClose={() => setIsOpen(false)}/> : null}
       <Styles.Row>
         <Styles.Box onClick={firstQuestion}>1</Styles.Box>
         <Styles.Box onClick={secondQuestion}>2</Styles.Box>
