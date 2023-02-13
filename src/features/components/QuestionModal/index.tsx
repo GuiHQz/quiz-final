@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import * as Styles from "./styles"
-import { Questions } from "../../../features/pages/Quiz/components/List1/data/questions"
+import { ObjectiveQuestions } from "../../../features/pages/Quiz/components/data/objectiveQuestions"
 
 interface QuestionModalProps {
     onClose: () => void
@@ -13,7 +13,7 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
     onClose,
     questionNumber
 }) => {
-    const textQuestions = Questions;
+    const objectiveQuestions = ObjectiveQuestions;
     const [selectedAlternative, setSelectedAlternative] = useState<string | null>(null);
 
     return (
@@ -28,12 +28,12 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
                 {type === "text" &&
                     <div>
                         <Styles.Header>
-                            {textQuestions[questionNumber].others.map(e =>
+                            {objectiveQuestions[questionNumber].others.map(e =>
                                 <h1>{e.title}</h1>
                             )}
                         </Styles.Header>
 
-                        {textQuestions[questionNumber].alternatives.map(e =>
+                        {objectiveQuestions[questionNumber].alternatives.map(e =>
                             <Styles.Button
                                 key={e.alternative}
                                 onClick={() => setSelectedAlternative(e.alternative)}

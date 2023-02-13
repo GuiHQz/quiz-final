@@ -3,7 +3,7 @@ import * as Styles from "./styles";
 import { Scoreboard } from "../../components/Scoreboard";
 import { ToggleQuestions } from "../../components/ToggleQuestions";
  
-export type AllTypeQuestions = "Q1" | "Q2" | "Q3" | "Q4" | "Q5";
+export type AllTypeQuestions = "QP1" | "QP2" | "QP3" | "QP4" | "QP5";
 
 const Quiz = () => {
   const [ currentQuestion, setCurrentQuestion ] = useState<AllTypeQuestions>();
@@ -31,11 +31,11 @@ const Quiz = () => {
       </Styles.Scoreboard>
       <Styles.Toggle>
         <Styles.ToggleWrapper>
-          <button onClick={() => onChangeQuestion("Q1")}>Q1</button>
-          <button onClick={() => onChangeQuestion("Q2")}>Q2</button>
-          <button onClick={() => onChangeQuestion("Q3")}>Q3</button>
-          <button onClick={() => onChangeQuestion("Q4")}>Q4</button>
-          <button onClick={() => onChangeQuestion("Q5")}>Q5</button>
+          <button onClick={() => onChangeQuestion("QP1")}>QP1</button>
+          <button onClick={() => onChangeQuestion("QP2")}>QP2</button>
+          <button onClick={() => onChangeQuestion("QP3")}>QP3</button>
+          {/* <button onClick={() => onChangeQuestion("QP4")}>Q4</button>
+          <button onClick={() => onChangeQuestion("QP5")}>Q5</button> */}
         </Styles.ToggleWrapper>
       </Styles.Toggle>
       <Styles.Content>
