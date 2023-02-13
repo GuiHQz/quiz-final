@@ -3,8 +3,8 @@ import { QuestionModal } from "../../../../components/QuestionModal";
 import * as Styles from "./styles";
 
 export const List1: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [numberQuestion, setNumberQuestion] = useState<number>()
+  const [isOpen, setIsOpen] = useState(false);
+  const [numberQuestion, setNumberQuestion] = useState<number>();
 
   const firstQuestion = () => {
     setNumberQuestion(0)
