@@ -2,13 +2,13 @@ import { useState } from "react"
 import * as Styles from "./styles"
 import { ObjectiveQuestions } from "../../../features/pages/Quiz/components/data/objectiveQuestions"
 
-interface QuestionModalProps {
+interface ObjectiveQuestionsModalProps {
     onClose: () => void
     questionNumber: number
     type?: "image" | "text" | "video";
 }
 
-export const QuestionModal: React.FC<QuestionModalProps> = ({
+export const ObjectiveQuestionsModal: React.FC<ObjectiveQuestionsModalProps> = ({
     type,
     onClose,
     questionNumber
@@ -35,7 +35,6 @@ export const QuestionModal: React.FC<QuestionModalProps> = ({
 
                         {objectiveQuestions[questionNumber].alternatives.map(e =>
                             <Styles.Button
-                                key={e.alternative}
                                 onClick={() => setSelectedAlternative(e.alternative)}
                                 style={{
                                     backgroundColor:
