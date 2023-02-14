@@ -10,7 +10,10 @@ function Router() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
-        <Route path="/campeoes" element={<>página dos campeoes</>} />
+        <Route path="/table" element={<>página da Tabela</>} />
+        <Route path="/rules" element={<>página das Regras </>} />
+        <Route path="/about-me" element={<>página do About me</>} />
+        <Route path="/participants" element={<>página dos Participantes</>} />
       </Routes>
     </BrowserRouter>
   )
