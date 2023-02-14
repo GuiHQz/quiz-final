@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { QuestionModal } from "../../../../components/QuestionModal";
+import { ObjectiveQuestionsModal } from "../../../../components/ObjectiveQuestionsModal";
 import * as Styles from "./styles";
 
 export const List1: React.FC = () => {
@@ -58,7 +58,7 @@ export const List1: React.FC = () => {
 
   return (
     <Styles.Container>
-      {isOpen ? <QuestionModal type="text" questionNumber={numberQuestion!} onClose={() => setIsOpen(false)}/> : null}
+      {isOpen ? <ObjectiveQuestionsModal type="text" questionNumber={numberQuestion!} onClose={() => setIsOpen(false)}/> : null}
       <Styles.Row>
         <Styles.Box onClick={firstQuestion}>1</Styles.Box>
         <Styles.Box onClick={secondQuestion}>2</Styles.Box>
