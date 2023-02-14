@@ -1,6 +1,6 @@
 import * as Styles from "./styles"
 import Logo from "../../../assets/imgs/user-logo.png"
-import { ChampionsData } from "../../../data/champions"
+import { ChampionsData } from "../../data/champions"
 import { useEffect, useState } from "react";
 
 export const Champions: React.FC = () => {

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import * as Styles from "./styles"
-import { ObjectiveQuestions } from "../../../features/pages/Quiz/components/data/objectiveQuestions"
+import { ObjectiveQuestions } from "../../../features/pages/Quiz/data/objectiveQuestions"
 
 interface ObjectiveQuestionsModalProps {
     onClose: () => void
