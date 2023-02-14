@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { QuestionModal } from "../../../../components/QuestionModal";
+import { ObjectiveQuestionsModal } from "../../../../components/ObjectiveQuestionsModal";
 import * as Styles from "./styles";
 
 export const List2: React.FC = () => {
@@ -7,58 +7,58 @@ export const List2: React.FC = () => {
   const [numberQuestion, setNumberQuestion] = useState<number>();
 
   const eleventhQuestion = () => {
-    setNumberQuestion(0)
+    setNumberQuestion(10)
     setIsOpen(true)
   }
   
   const twelfthQuestion = () => {
-    setNumberQuestion(1)
+    setNumberQuestion(11)
     setIsOpen(true)
   }
 
   const thirteenthQuestion = () => {
-    setNumberQuestion(2)
+    setNumberQuestion(12)
     setIsOpen(true)
   }
 
   const fourteenthQuestion = () => {
-    setNumberQuestion(3)
+    setNumberQuestion(13)
     setIsOpen(true)
   }
 
   const fifteenthQuestion = () => {
-    setNumberQuestion(4)
+    setNumberQuestion(14)
     setIsOpen(true)
   }
 
   const sixteenthQuestion = () => {
-    setNumberQuestion(5)
+    setNumberQuestion(15)
     setIsOpen(true)
   }
 
   const seventeenthQuestion = () => {
-    setNumberQuestion(6)
+    setNumberQuestion(16)
     setIsOpen(true)
   }
 
   const eighteenthQuestion = () => {
-    setNumberQuestion(7)
+    setNumberQuestion(17)
     setIsOpen(true)
   }
 
   const nineteenthQuestion = () => {
-    setNumberQuestion(8)
+    setNumberQuestion(18)
     setIsOpen(true)
   }
 
   const twentiethQuestion = () => {
-    setNumberQuestion(9)
+    setNumberQuestion(19)
     setIsOpen(true)
   }
 
   return (
     <Styles.Container>
-      {isOpen ? <QuestionModal type="text" questionNumber={numberQuestion!} onClose={() => setIsOpen(false)}/> : null}
+      {isOpen ? <ObjectiveQuestionsModal type="text" questionNumber={numberQuestion!} onClose={() => setIsOpen(false)}/> : null}
       <Styles.Row>
         <Styles.Box onClick={eleventhQuestion}>11</Styles.Box>
         <Styles.Box onClick={twelfthQuestion}>12</Styles.Box>
