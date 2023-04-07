@@ -2,6 +2,7 @@ import * as Styles from "./styles";
 import { AllTypeQuestions } from "../../pages/Quiz";
 import { List1 } from "../../pages/Quiz/components/List1";
 import { List2 } from "../../pages/Quiz/components/List2";
+import { List3 } from "../../pages/Quiz/components/List3";
 
 interface ToggleQuestionsProps {
   /**
@@ -23,7 +24,7 @@ export const ToggleQuestions: React.FC<ToggleQuestionsProps> = ({
         <List2 />
       )}
       {currentPageQuestion == "QP3" && (
-        <div>3</div>
+        <List3 /> 
       )}
       {currentPageQuestion == "QP4" && (
         <div>4</div>
