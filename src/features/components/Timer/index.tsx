@@ -2,27 +2,35 @@ import { useEffect, useState } from "react";
 import * as Styles from "./styles";
 
 export const Timer: React.FC = () => {
-  const [timer, setTimer] = useState(30);
+  const [timer, setTimer] = useState(40);
+  const [startTimer, setStartTimer] = useState(false);
 
   const minutes = Math.floor(timer / 60);
   const seconds = timer % 60;
 
+  const handleStartTimer = () => {
+    setStartTimer(true);
+  };
+
   useEffect(() => {
-    if (timer > 0) {
+    if (startTimer && timer > 0) {
       setTimeout(() => {
         setTimer(timer - 1);
-      }, 1000)
+      }, 1000);
+    } else if (timer === 0) {
+      setTimer(40);
+      setStartTimer(false);
     }
-    else {
-      setTimer(0);
-    }
-  }, [timer])
+  }, [startTimer, timer]);
 
   return (
-    <div>
-      <label>{minutes.toString().padStart(2, "0")}</label>
-      <label>:</label>
-      <label>{seconds.toString().padStart(2, "0")}</label>
-    </div>
+    <Styles.Container>
+      <Styles.Label>{minutes.toString().padStart(2, "0")}</Styles.Label>
+      <Styles.Label>:</Styles.Label>
+      <Styles.Label>{seconds.toString().padStart(2, "0")}</Styles.Label>
+      <Styles.Button>
+        <button onClick={handleStartTimer}>START</button>
+      </Styles.Button>
+    </Styles.Container>
   );
 }
