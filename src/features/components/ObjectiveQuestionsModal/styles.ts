@@ -17,8 +17,18 @@ export const Container = styled.div`
 export const Content = styled.div`
   background-color: white;
   border-radius: 10px;
-  height: 80%;
+  overflow-y: auto; 
+  max-height: 80%;
   width: 80%;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #F0F0F0;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #C0C0C0;
+  }
 `
 
 export const Close = styled.button`
@@ -71,4 +81,8 @@ export const Button = styled.button`
   :hover {
     background-color: #4f4f4f;
   }
+`
+
+export const Image = styled.div`
+  
 `

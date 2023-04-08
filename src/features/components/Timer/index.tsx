@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
 import * as Styles from "./styles";
 
-export const Timer: React.FC = () => {
-  const [timer, setTimer] = useState(40);
+interface TimerProps {
+  time: number
+}
+
+export const Timer: React.FC<TimerProps> = ({
+  time
+}) => {
+  const [timer, setTimer] = useState(time);
   const [startTimer, setStartTimer] = useState(false);
 
   const minutes = Math.floor(timer / 60);
