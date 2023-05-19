@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as Styles from "./styles";
 import { Scoreboard } from "../../components/Scoreboard";
 import { ToggleQuestions } from "../../components/ToggleQuestions";
+import { Version } from "../../../components/Version";
  
 export type AllTypeQuestions = "QP1" | "QP2" | "QP3" | "QP4" | "QP5";
 
@@ -29,6 +30,7 @@ const Quiz = () => {
           scorePTwo={0}
         />
       </Styles.Scoreboard>
+      <Version />
       <Styles.Toggle>
         <Styles.ToggleWrapper>
           <button onClick={() => onChangeQuestion("QP1")}>QP1</button>

@@ -2,6 +2,7 @@ import * as Styles from "./styles"
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button";
+import { Version } from "../../../components/Version";
 import { Champions } from "../../components/Champions";
 import userLogo from "../../../assets/imgs/user-logo.png"
 import iconList from "../../../assets/imgs/form-list.png"
@@ -13,6 +14,7 @@ const Home = () => {
   return (
     <Styles.Container>
       <Styles.BlockOne>
+        <Version />
         <Styles.Body>
           <h1>RIVALS</h1>
           <h2>QUIZ</h2>
