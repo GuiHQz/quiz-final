@@ -66,7 +66,7 @@ export const ObjectiveQuestionsModal: React.FC<ObjectiveQuestionsModalProps> = (
                                             : ''
                                     : ' '
                         }}>
-                        {e.answer}
+                        {e.alternative}) {e.answer}
                     </Styles.Button>
                 )}
             </Styles.Content>
