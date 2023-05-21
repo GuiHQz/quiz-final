@@ -23,7 +23,9 @@ const Home = () => {
           />
         </Styles.Body>
         <Styles.Footer>
-          <Styles.BlockFooterOne>
+          <Styles.BlockFooterOne
+            onClick={() => navigate("/rules")}
+          >
             <img src={iconList} height="90px" width="90px" />
             <h2>Rules</h2>
           </Styles.BlockFooterOne>
