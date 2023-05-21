@@ -24,7 +24,7 @@ export const Timer: React.FC<TimerProps> = ({
         setTimer(timer - 1);
       }, 1000);
     } else if (timer === 0) {
-      setTimer(40);
+      setTimer(0);
       setStartTimer(false);
     }
   }, [startTimer, timer]);

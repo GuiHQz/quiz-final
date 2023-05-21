@@ -78,11 +78,15 @@ export const Button = styled.button`
   height: 100px;
   width: 400px;
   border: none;
+  font-weight: bold;
   :hover {
     background-color: #4f4f4f;
   }
 `
 
 export const Image = styled.div`
-  
+  img{
+    max-width: 500px;
+    max-height: 500px;
+  }
 `
