@@ -17,18 +17,26 @@ export const Body = styled.div`
   align-items: center;
   height: 70%;
   h1 {
-    position: absolute;
-    top: 30px;
-    font-family: 'Roboto', sans-serif;
     color: white;
-    font-weight: 700;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    top: 30px;
     z-index: 2;
+    font-weight: 700;
   }
   h2 {
+    color: white;
     position: absolute;
     font-family: 'Roboto', sans-serif;
-    z-index: 1;
-    top: 58px;
+    top: 72px;
+    z-index: 2;
+  }
+  h3 {
+    position: absolute;
+    color: #A91079;
+    font-family: 'Roboto', sans-serif;
+    top: 60px;
+    z-index: 3;
   }
 `
 
