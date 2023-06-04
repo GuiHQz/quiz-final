@@ -1,26 +1,31 @@
-import * as Styles from "./styles"
-import Logo from "../../../assets/imgs/user-logo.png"
-import { ChampionsData } from "../../data/champions"
-import { useEffect, useState } from "react";
+import * as Styles from "./styles";
+import Logo from "../../../assets/imgs/user-logo.png";
+import { ChampionsData } from "../../data/champions";
+import { useNavigate } from "react-router-dom";
 
 export const Champions: React.FC = () => {
-  const championsData = ChampionsData;
+  const championsData = ChampionsData.sort((a, b) => b.score - a.score).slice(0, 5);
+  const navigate = useNavigate();
 
   return (
     <Styles.Container>
-      <h1>CAMPEÕES</h1>
+      <h1>CHAMPIONS</h1>
       <Styles.Participants>
-        <Styles.Name>Nome</Styles.Name>
-        <Styles.Score>PV</Styles.Score>
+        <Styles.Name>Name</Styles.Name>
+        <Styles.Score>TW</Styles.Score>
       </Styles.Participants>
       <Styles.Table>
-        {championsData.sort((a, b) => b.score - a.score).map(column =>
-          <Styles.Participants>
-            <Styles.Name>{column.name}</Styles.Name>
-            <Styles.Score>{column.score}</Styles.Score>
-          </Styles.Participants>
-        )}
+        {championsData
+          .map((column) => (
+            <Styles.Participants>
+              <Styles.Name>{column.name}</Styles.Name>
+              <Styles.Score>{column.score}</Styles.Score>
+            </Styles.Participants>
+          ))}
       </Styles.Table>
+      <Styles.ChampionsButton onClick={() => navigate("/champions")}>
+        See all champions
+      </Styles.ChampionsButton>
     </Styles.Container>
-  )
-}
+  );
+};
