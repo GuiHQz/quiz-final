@@ -11,17 +11,16 @@ export const Champions: React.FC = () => {
     <Styles.Container>
       <h1>CHAMPIONS</h1>
       <Styles.Participants>
-        <Styles.Name>Name</Styles.Name>
-        <Styles.Score>TW</Styles.Score>
+        <Styles.Name><span>Name</span></Styles.Name>
+        <Styles.Score><span>TW</span></Styles.Score>
       </Styles.Participants>
       <Styles.Table>
-        {championsData
-          .map((column) => (
-            <Styles.Participants>
-              <Styles.Name>{column.name}</Styles.Name>
-              <Styles.Score>{column.score}</Styles.Score>
-            </Styles.Participants>
-          ))}
+        {championsData.map((column) => (
+          <Styles.Participants>
+            <Styles.Name>{column.name}</Styles.Name>
+            <Styles.Score>{column.score}</Styles.Score>
+          </Styles.Participants>
+        ))}
       </Styles.Table>
       <Styles.ChampionsButton onClick={() => navigate("/champions")}>
         See all champions
