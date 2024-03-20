@@ -1,5 +1,5 @@
 # Projeto RivalsQuiz
-Esse projeto tem como ideia de criar uma aplicação web com intuito de simular uma competição entre dois competidores, onde vão haver diversas páginas e perguntas para os participantes poderem somar seus pontos conforme forem acertando.
+Esse projeto tem como ideia de criar uma aplicação web com intuito de simular uma competição entre dois competidores, onde vão haver páginas de perguntas para os participantes poderem somar seus pontos a medida que forem acertando.
 
 ## Menu Inicial
 Na página inicial os temos um menu apresentando as seções de campeões, sobre mim e as regras do torneio
