@@ -26,6 +26,8 @@ git clone https://github.com/seu-usuario/seu-repositorio.git
 ```
 • Lembre-se de substituir o ```seu-usuario``` pelo seu nome de usuário do GitHub
 
+• Digite o comando: ```npm install``` ou ```yarn install```
+
 • Procure a pasta que você salvou o projeto
 
 • Abra o prompt de comando na pasta que você salvou o projeto
