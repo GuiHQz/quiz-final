@@ -52,6 +52,9 @@ Se o seu interesse for a contribuição:
 ## Contato
 Se você tiver alguma dúvida, sugestão ou gostaria de falar sobre este projeto, entre em contato comigo por e-mail: guilher.queiroz@gmail.com
 
+## Beta
+• Como o projeto está em beta, diversos pontos como responsividade para outros tipos de dispositivos, como também alguns bugs não foram levados 100% em foco. O intuito inicial desse projeto era trazer a possibilidade de seu MVP (Minimum Viable Product) para o WEB de dispositivos de desktop, e proporcionar a diversão levando em conta as limitações iniciais do mesmo.
+
 ## Screenshots
 ![image](https://github.com/GuiHQz/quiz-final/assets/85589192/5dbc4b0a-0a32-4006-bbee-9cee4262c319)
 
