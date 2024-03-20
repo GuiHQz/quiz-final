@@ -26,13 +26,13 @@ git clone https://github.com/seu-usuario/seu-repositorio.git
 ```
 • Lembre-se de substituir o ```seu-usuario``` pelo seu nome de usuário do GitHub
 
-• Digite o comando: ```npm install``` ou ```yarn install```
-
 • Procure a pasta que você salvou o projeto
 
 • Abra o prompt de comando na pasta que você salvou o projeto
 
-• Digite o seguinte comando: ```npm run dev```
+• Digite o comando: ```npm install``` ou ```yarn install``` para baixar as dependeências do projeto
+
+• Em seguida, para rodar o projeto, digite o seguinte comando: ```npm run dev```
 
 • Após o comando rodar, basta entrar no link: ```http://localhost:5173```
 
